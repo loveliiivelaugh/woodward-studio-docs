@@ -4,8 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Woodward Studio',
-  tagline: 'Framework Documentation 📚',
-  favicon: 'img/favicon.ico',
+  tagline: 'Agentic ops engineering, AI solutions architecture, and modern full-stack systems.',
+  favicon: 'icon.png',
 
   // Set the production url of your site here
   url: 'https://docs.woodwardwebdev.com',
@@ -75,23 +75,23 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'icon.png',
     navbar: {
       title: 'Woodward Studio',
       logo: {
         alt: 'Woodward Studio Logo',
-        src: 'img/logo.svg',
+        src: 'icon.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/loveliiivelaugh/woodward-studio-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -104,25 +104,25 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Getting Started',
+              to: '/docs/getting-started',
+            },
+            {
+              label: 'Introduction',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Work',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Blog',
+              href: 'https://blog.woodwardwebdev.com',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Main Site',
+              href: 'https://woodward.studio',
             },
           ],
         },
@@ -130,12 +130,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/loveliiivelaugh/woodward-studio-docs',
             },
           ],
         },
