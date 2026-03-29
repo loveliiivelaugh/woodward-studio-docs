@@ -1,23 +1,94 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 6rem 0 5rem;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.75rem, 4vw, 4.2rem);
+  line-height: 1.05;
+  color: #0f172a;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #334155;
+  max-width: 540px;
 }
 
 .buttons {
   display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroMedia {
+  display: flex;
+  justify-content: center;
+}
+
+.heroFrame {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 24px;
+  border: 1px dashed rgba(109, 94, 252, 0.45);
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.08);
+}
+
+.heroFrameText {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0 3rem;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+  }
+
+  .heroFrame {
+    min-height: 220px;
+  }
+
+  .heroTitle {
+    text-align: left;
+  }
+}
+
+[data-theme='dark'] .heroTitle {
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: #cbd5f5;
+}
+
+[data-theme='dark'] .heroFrame {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(139, 123, 255, 0.55);
+}
+
+[data-theme='dark'] .heroFrameText {
+  color: #cbd5f5;
 }
