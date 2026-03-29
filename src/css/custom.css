@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  --ifm-color-primary: #6d5efc;
-  --ifm-color-primary-dark: #5a4ce6;
-  --ifm-color-primary-darker: #5346d8;
-  --ifm-color-primary-darkest: #4136b7;
-  --ifm-color-primary-light: #7c71ff;
-  --ifm-color-primary-lighter: #8c82ff;
-  --ifm-color-primary-lightest: #b2acff;
+  --ifm-color-primary: #0ea5e9;
+  --ifm-color-primary-dark: #0284c7;
+  --ifm-color-primary-darker: #0369a1;
+  --ifm-color-primary-darkest: #075985;
+  --ifm-color-primary-light: #38bdf8;
+  --ifm-color-primary-lighter: #7dd3fc;
+  --ifm-color-primary-lightest: #bae6fd;
 
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
   --ifm-heading-font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --ifm-code-font-size: 92%;
 
-  --ifm-background-color: #f7f8fb;
+  --ifm-background-color: #f0f9ff;
   --ifm-font-color-base: #0f172a;
   --ifm-font-color-secondary: #475569;
   --ifm-navbar-background-color: rgba(255, 255, 255, 0.88);
@@ -22,17 +22,17 @@
   --ifm-global-shadow-lw: 0 1px 2px rgba(16, 24, 40, 0.08);
   --ifm-global-shadow-md: 0 12px 36px rgba(16, 24, 40, 0.12);
 
-  --docusaurus-highlighted-code-line-bg: rgba(109, 94, 252, 0.12);
+  --docusaurus-highlighted-code-line-bg: rgba(14, 165, 233, 0.12);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #8b7bff;
-  --ifm-color-primary-dark: #6f5dff;
-  --ifm-color-primary-darker: #604eff;
-  --ifm-color-primary-darkest: #4a35ff;
-  --ifm-color-primary-light: #a393ff;
-  --ifm-color-primary-lighter: #b2a3ff;
-  --ifm-color-primary-lightest: #cfc8ff;
+  --ifm-color-primary: #38bdf8;
+  --ifm-color-primary-dark: #0ea5e9;
+  --ifm-color-primary-darker: #0284c7;
+  --ifm-color-primary-darkest: #0369a1;
+  --ifm-color-primary-light: #7dd3fc;
+  --ifm-color-primary-lighter: #bae6fd;
+  --ifm-color-primary-lightest: #e0f2fe;
 
   --ifm-background-color: #0b0f17;
   --ifm-font-color-base: #f8fafc;
@@ -43,7 +43,7 @@
   --ifm-global-shadow-lw: 0 1px 2px rgba(0, 0, 0, 0.35);
   --ifm-global-shadow-md: 0 16px 44px rgba(0, 0, 0, 0.5);
 
-  --docusaurus-highlighted-code-line-bg: rgba(139, 123, 255, 0.18);
+  --docusaurus-highlighted-code-line-bg: rgba(56, 189, 248, 0.18);
 }
 
 html {
@@ -74,12 +74,12 @@ body {
 }
 
 .button--primary {
-  background: linear-gradient(135deg, #6d5efc, #8b7bff);
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
   border: none;
 }
 
 .button--secondary {
-  border: 1px solid rgba(109, 94, 252, 0.4);
+  border: 1px solid rgba(14, 165, 233, 0.4);
   color: var(--ifm-color-primary);
   background: transparent;
 }
@@ -92,8 +92,8 @@ body {
 }
 
 .hero {
-  background: radial-gradient(circle at top right, rgba(109, 94, 252, 0.18), transparent 45%),
-    radial-gradient(circle at 10% 10%, rgba(139, 123, 255, 0.2), transparent 45%);
+  background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 45%),
+    radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.2), transparent 45%);
 }
 
 .markdown > h1, .markdown > h2, .markdown > h3 {
