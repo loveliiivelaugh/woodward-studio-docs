@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Woodward Studio',
   tagline: 'Agentic ops engineering, AI solutions architecture, and modern full-stack systems.',
-  favicon: 'icon.png',
+  favicon: 'img/icon.png',
 
   // Set the production url of your site here
   url: 'https://docs.woodwardwebdev.com',
@@ -75,12 +75,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'icon.png',
+    image: 'img/icon.png',
     navbar: {
       title: 'Woodward Studio',
       logo: {
         alt: 'Woodward Studio Logo',
-        src: 'icon.png',
+        src: 'img/icon.png',
       },
       items: [
         {
