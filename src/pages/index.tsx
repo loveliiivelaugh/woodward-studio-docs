@@ -9,22 +9,23 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={styles.heroBanner}>
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
+            <p className={styles.heroKicker}>Documentation</p>
             <Heading as="h1" className={styles.heroTitle}>
               {siteConfig.title}
             </Heading>
             <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
             <div className={styles.buttons}>
               <Link
-                className="button button--primary button--lg"
+                className={clsx('button button--lg', styles.primaryCta)}
                 to="/docs/getting-started">
                 Start here
               </Link>
               <Link
-                className="button button--secondary button--lg"
+                className={clsx('button button--lg', styles.secondaryCta)}
                 to="/docs/intro">
                 About Woodward Studio
               </Link>
