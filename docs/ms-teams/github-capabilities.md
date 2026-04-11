@@ -1,48 +1,53 @@
-# GitHub Capabilities - 2026-04-11
+---
+title: GitHub capabilities
+description: Live GitHub capabilities validated through GitHub CLI, including repo visibility, workflow monitoring, and preview agent-task support.
+sidebar_position: 3
+---
 
-## Summary
+# GitHub capabilities
+
 This session validated a working GitHub CLI environment with authenticated access to repositories, workflows, and preview agent-task functionality.
 
 ## Confirmed working capabilities
 - GitHub CLI installed and authenticated
-- Repo listing works
-- Account identity lookup works
-- Repo inspection works
+- repo listing works
+- account identity lookup works
+- repo inspection works
 - GitHub Actions workflow visibility works
 - `gh agent-task` preview commands are available
 
-## Confirmed observations
-### Auth
-- Active GitHub account: `loveliiivelaugh`
-- Token scopes include:
-  - `gist`
-  - `read:org`
-  - `repo`
-  - `workflow`
+## Demonstrations completed
 
-### Repo visibility
-Confirmed access to personal and private repositories, including:
-- `loveliiivelaugh/blog`
-- `loveliiivelaugh/graph-api`
-- `loveliiivelaugh/agent-toolsmith`
-- `loveliiivelaugh/jobs`
-- `loveliiivelaugh/woodward-studio-docs`
+### Account and repo visibility
+The agent confirmed access to the authenticated GitHub account and successfully listed repositories, including private repositories.
 
-### Repo inspection demo
-Inspected `loveliiivelaugh/woodward-studio-docs` and confirmed it serves as a documentation hub for GuardianAI concepts including:
+**Validated outcome**
+- Teams chat can be used to inspect account and repo surfaces
+- the agent can summarize engineering assets without opening GitHub directly
+
+### Repo briefing demo
+The agent inspected `loveliiivelaugh/woodward-studio-docs` and summarized it as a documentation hub for GuardianAI concepts including:
 - architecture
 - agent lifecycle
 - orchestration
 - automation APIs
 - self-hosting guides
 
+**Validated outcome**
+- repo summarization works
+- product and engineering briefing workflows are practical from chat
+
 ### Workflow visibility demo
-Retrieved recent workflow runs for `loveliiivelaugh/woodward-studio-docs`, including successful Copilot coding agent activity.
+The agent retrieved recent workflow runs for `loveliiivelaugh/woodward-studio-docs`, including successful Copilot coding agent activity.
 
 Examples observed:
 - `replace-purple-with-light-blue-or-sea-green`
 - `replace-app-icon`
 - `fix-ci-cd-errors`
+
+**Validated outcome**
+- GitHub Actions visibility works
+- Teams can serve as a lightweight engineering command console
 
 ### Agent task feature
 `gh agent-task --help` confirmed preview support for:
@@ -50,9 +55,13 @@ Examples observed:
 - list
 - view
 
-## Practical implications
-The system can already support GitHub-centered mobile operations from Teams chat for:
-- repository visibility
+**Validated outcome**
+- the account is positioned for GitHub-based agent delegation workflows
+- there is a direct path toward controlled coding task orchestration
+
+## Why this matters
+GitHub gives the system a strong execution layer for:
+- engineering visibility
 - workflow monitoring
-- repo briefing and status summaries
-- future agent-task delegation into coding workflows
+- repository-aware briefings
+- eventual agent-task delegation and coding automation

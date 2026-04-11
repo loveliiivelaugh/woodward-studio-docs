@@ -1,43 +1,63 @@
-# Top Practical Demos - 2026-04-11
+---
+title: Top practical demos
+description: The highest-value demonstrations performed through Microsoft Teams chat using OpenClaw, Microsoft 365, OneDrive, Excel, and GitHub.
+sidebar_position: 4
+---
 
-## Top 5 practical demonstrations
-1. Executive repo and workflow briefing from GitHub
-2. Outlook inbox awareness from chat
-3. Calendar awareness and event creation from chat
-4. Drive and document access through OneDrive
-5. Agentic coding task delegation through GitHub agent-task workflows
+# Top practical demos
 
-## Demonstrations completed so far
-### Demo 1
-Executive repo and workflow briefing from GitHub
-- Used GitHub CLI to inspect repository metadata and recent workflow runs
-- Demonstrated mobile-friendly visibility into engineering and docs operations
+These are the most practical demonstrations validated so far through Microsoft Teams chat.
 
-### Demo 2
-Outlook inbox awareness
-- Sent a test message to mailbox
-- Read the mailbox and confirmed the message was present
+## 1. Executive repo and workflow briefing from GitHub
+From Teams, the agent can inspect repositories, summarize what they are for, and report on recent workflow activity.
 
-### Demo 3
-Calendar awareness and event creation
-- Created a test calendar event
-- Read the event back from Microsoft Graph results
+**What this demonstrates**
+- GitHub repo visibility
+- GitHub Actions visibility
+- mobile-friendly engineering and product status briefings
 
-## Suggested next demonstrations
-### Demo 4
-Drive and document access through OneDrive
-- create or upload files
-- retrieve and summarize files from cloud storage
+## 2. Outlook inbox awareness
+The agent can send a test email, inspect mailbox contents, and confirm delivery from chat.
 
-### Demo 5
-Agentic coding task delegation through GitHub
-- inspect existing agent tasks
-- create a controlled task in a sandbox repo
-- summarize result and workflow trace back in chat
+**What this demonstrates**
+- Outlook mail read
+- Outlook mail send
+- inbox verification workflows
 
-## Strategic significance
-This setup enables a phone-based command surface in Teams that can orchestrate:
-- Microsoft 365 data surfaces
-- GitHub repositories and workflows
-- future coding agents and subagents
-- practical business and engineering operations from chat
+## 3. Calendar awareness and event creation
+The agent can create a calendar event and then read calendar state back through Microsoft Graph.
+
+**What this demonstrates**
+- calendar read
+- calendar write
+- meeting and scheduling workflows from chat
+
+## 4. Cloud workspace and document storage through OneDrive
+The agent can generate markdown documents locally, upload them into OneDrive, and use OneDrive as an extended workspace for durable notes and artifacts.
+
+**What this demonstrates**
+- OneDrive file creation and storage
+- cloud-backed working memory
+- document persistence across sessions
+
+## 5. Excel workbook creation and lightweight operational tracking
+The agent can create an Excel workbook in OneDrive, edit cells and ranges through Graph workbook APIs, and read back targeted values.
+
+**What this demonstrates**
+- spreadsheet-backed operations
+- lightweight tracker and dashboard workflows
+- a path toward CRM, planning, and executive dashboard use cases
+
+## Why these demos matter
+Taken together, these demos show that Microsoft Teams can function as:
+- a command surface for Microsoft 365 operations
+- a control plane for cloud documents and structured data
+- an executive and operations dashboard interface
+- a bridge into GitHub-centered engineering workflows
+
+## Strong next demos
+The next demonstrations with the highest value are:
+- GitHub agent-task delegation in a safe sandbox repo
+- scheduled briefings using OpenClaw cron
+- richer OneDrive folder and memory models
+- Teams-native Graph workflows once additional scopes are granted

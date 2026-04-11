@@ -1,22 +1,38 @@
-# Next Demo Ideas - 2026-04-11
+---
+title: Next demo ideas
+description: Follow-up demonstrations and product directions to explore after validating the current Microsoft 365 and GitHub capabilities.
+sidebar_position: 6
+---
 
-## Future demos to return to
-- Cleaner business tracker workbook with multiple sheets
+# Next demo ideas
+
+These are the strongest follow-up demonstrations and product directions identified after the current wave of successful Teams-based demos.
+
+## Future demonstrations
+- cleaner business tracker workbook with multiple sheets
 - CRM-style spreadsheet workflow
-- Content calendar or editorial tracker
-- Daily executive dashboard workbook
+- content calendar or editorial tracker
+- daily executive dashboard workbook
 - GitHub agent-task delegation demo in a safe sandbox repository
-- Expanded OneDrive cloud workspace structure and durable cloud memory model
-- Teams Graph scope expansion and Teams-native workflow demonstrations
+- expanded OneDrive cloud workspace structure and durable cloud memory model
+- richer Teams-native workflow demonstrations once more Graph scopes are enabled
 
-## Strategic follow-up topic
-Explore the best orchestration patterns across the Microsoft ecosystem using:
-- triggers
-- schedules
-- chat-based commands
-- GitHub agent-task delegation
-- OneDrive-backed working memory
-- Outlook and calendar automation
+## Product direction to explore
+A strong UX pattern is emerging:
 
-## Intent
-These should be revisited as the next wave of demonstrations after the current working Microsoft and GitHub capabilities.
+> users do work conversationally with the agent first, then ask the agent to promote repeated tasks into schedules or triggers.
+
+That suggests future documentation and demos should also explore:
+- scheduled briefings
+- trigger-based automations
+- OneDrive-backed memory and document generation
+- GitHub agent-task orchestration
+- Teams as the approval and control surface
+
+## Why this matters
+This is the bridge between:
+- assistant-style interaction
+- repeatable business workflows
+- orchestrated agent operations
+
+The goal is not just to show tool access, but to show how repeated real work can evolve into durable automation.

@@ -1,50 +1,74 @@
-# Microsoft Graph Capabilities - 2026-04-11
+---
+title: Microsoft Graph capabilities
+description: Live Microsoft 365 capabilities validated through Microsoft Graph, including mail, calendar, OneDrive, and Excel workbook operations.
+sidebar_position: 2
+---
 
-## Summary
-This session established and validated a working Microsoft Graph CLI workflow inside the OpenClaw environment.
+# Microsoft Graph capabilities
+
+This session validated a working Microsoft Graph CLI workflow inside the OpenClaw environment and proved that Microsoft 365 services can be controlled through a Teams-driven agent workflow.
 
 ## Confirmed working capabilities
-- Authenticated Microsoft Graph CLI access
-- Basic user profile lookup via `/me`
+- authenticated Microsoft Graph CLI access
+- user profile lookup via `/me`
 - Outlook mail read
-- Outlook mail send/write
-- Calendar read
-- Calendar event create/write
-- OneDrive / business drive access
+- Outlook mail send
+- calendar read
+- calendar event creation
+- OneDrive business drive access
+- OneDrive file upload for markdown and Excel files
+- Excel workbook edits and targeted range reads through Microsoft Graph
 
-## Confirmed working demonstrations
+## Demonstrations completed
+
 ### Mail demo
-A test email was sent and then successfully read back from the mailbox.
+A test email was sent and then read back from the mailbox.
 
-- Subject: `OpenClaw Demo Mail`
-- Result: message appeared in mailbox and was retrievable via Graph API
+**Validated outcome**
+- outbound message creation works
+- mailbox readback works
+- Teams chat can drive inbox-aware workflows
 
 ### Calendar demo
-A test event was created and then successfully read back from calendar results.
+A test event was created and then read back from calendar results.
 
-- Subject: `OpenClaw Demo Event`
-- Start: `2026-04-11 16:30 America/Chicago`
-- End: `2026-04-11 17:00 America/Chicago`
-- Result: event appeared in calendar and was retrievable via Graph API
+**Validated outcome**
+- event creation works
+- calendar retrieval works
+- meeting and schedule automations are realistic from this setup
+
+### OneDrive demo
+Markdown notes created in the workspace were uploaded into OneDrive and verified.
+
+**Validated outcome**
+- OneDrive can act as an extended workspace
+- cloud-backed note storage is working
+- session artifacts can be preserved outside the local machine
+
+### Excel demo
+An Excel workbook was created in OneDrive, edited through workbook APIs, and read back using targeted range queries.
+
+**Validated outcome**
+- spreadsheet-backed ops workflows are viable
+- structured records can be updated from chat
+- lightweight dashboards and trackers are practical in this environment
 
 ## Remaining Microsoft gap
 ### Teams Graph permissions
-Teams surface still needs additional delegated scopes.
+Deeper Teams-native Graph operations still need additional delegated scopes.
 
 Recommended next scope:
 - `Team.ReadBasic.All`
 
-Likely helpful additional scopes later:
+Likely useful additions later:
 - `Channel.ReadBasic.All`
 - `Chat.Read`
 - `Chat.ReadWrite`
 
-## Practical implications
-The system can already support mobile-driven agent operations for:
-- inbox awareness
-- message sending
-- calendar awareness
-- event creation
-- OneDrive-backed document storage and retrieval
-
-This is enough to begin demonstrating real business productivity workflows from Teams chat.
+## Why this matters
+This gives the system a strong Microsoft 365 foundation for:
+- inbox workflows
+- meeting prep and scheduling
+- cloud-backed notes and runbooks
+- spreadsheet-driven operational tracking
+- Teams-based mobile control over business workflows

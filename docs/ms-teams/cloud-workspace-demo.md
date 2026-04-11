@@ -1,30 +1,44 @@
-# OpenClaw Cloud Workspace Demo
+---
+title: Cloud workspace demo
+description: Demonstration of OneDrive as an extended OpenClaw workspace for durable cloud-backed notes and operational artifacts.
+sidebar_position: 5
+---
 
-Date: 2026-04-11
+# Cloud workspace demo
 
-## Purpose
-Demonstrate that OpenClaw can treat OneDrive as an extended workspace for durable notes, operational artifacts, and working documents.
+This demonstration showed that OpenClaw can treat OneDrive as an extended workspace for durable notes, artifacts, and operational documents.
 
-## What this proves
-- A document can be created in the local workspace
-- The document can be uploaded into OneDrive
-- The cloud copy can serve as durable session memory or operational documentation
-- Teams chat can function as the control surface for cloud-backed agent work
+## What was demonstrated
+- a markdown document was created in the local workspace
+- the document was uploaded into OneDrive
+- the cloud copy was verified in a structured `OpenClaw` folder
+- the document content could be surfaced back into chat
 
-## Suggested future folder structure
-- OpenClaw/notes/
-- OpenClaw/demos/
-- OpenClaw/runbooks/
-- OpenClaw/drafts/
-- OpenClaw/reports/
+## Why it matters
+This pattern gives the system a practical cloud-backed workspace that can hold:
+- notes
+- runbooks
+- drafts
+- reports
+- demo artifacts
+- durable session outputs
 
-## Candidate future uses
-1. Daily executive briefings
-2. Agent-generated project summaries
-3. GitHub workflow reports
-4. Microsoft 365 operational notes
-5. Draft proposals and strategy docs
-6. Persistent working memory across sessions
+## Suggested folder model
+- `OpenClaw/notes/`
+- `OpenClaw/demos/`
+- `OpenClaw/runbooks/`
+- `OpenClaw/drafts/`
+- `OpenClaw/reports/`
 
-## Status
-This file was created locally first and is intended to be uploaded into OneDrive as part of the cloud workspace demonstration.
+## Product significance
+Using OneDrive this way turns Microsoft 365 storage into:
+- persistent memory infrastructure
+- a file-backed artifact layer for agent work
+- a bridge between chat-driven actions and durable business documentation
+
+## Future use cases
+- daily executive briefings saved to cloud storage
+- project summaries written by agents
+- GitHub workflow reports archived in OneDrive
+- strategy drafts and operating docs generated from Teams chat
+- persistent working memory across sessions and devices
