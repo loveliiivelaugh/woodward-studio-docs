@@ -35,14 +35,16 @@ This workflow works best as a layered pipeline:
 5. thread prioritization
 6. metadata extraction
 7. optional rendered-page extraction
-8. manual or semi-manual review
-9. downstream sentiment analysis or classification
+8. screenshot or document capture fallback
+9. manual or semi-manual review
+10. downstream sentiment analysis or classification
 
 The key design principle is:
 
 - use search tools for broad discovery
 - use Reddit-specific tools for follow-up extraction
 - use browser automation only when simpler extraction is not enough
+- use screenshot or document capture when DOM-level extraction is unreliable
 - keep a manual fallback because Reddit may block automated rendering
 
 ## Recommended Tooling Pattern
@@ -76,8 +78,24 @@ Use browser automation only when needed to:
 - inspect rendered pages
 - recover visible text that simple scraping misses
 - validate page content manually or semi-manually
+- capture screenshots or printable views for downstream OCR
 
 This layer is the least reliable because Reddit may apply anti-bot protections.
+
+### OCR and document parsing layer
+
+Use an OCR or document parsing tool when:
+
+- the page can be rendered but not scraped cleanly
+- visible comment text needs to be captured from screenshots or PDFs
+- you want text extraction that is less dependent on the Reddit DOM structure
+
+This layer is useful for:
+
+- screenshots of visible comment sections
+- PDFs or print-style exports
+- image-to-text recovery
+- turning visual captures into analysis-ready text
 
 ## Workflow Steps
 
@@ -213,9 +231,35 @@ Common issues include:
 
 Because of that, deeper extraction should be treated as optional and best-effort.
 
-## Step 8. Use a manual or semi-manual fallback
+## Step 8. Use screenshot or document capture when needed
 
-When browser automation is blocked or comment extraction is incomplete, use a manual review layer.
+When structured scraping or DOM extraction is incomplete, capture the visible thread content as screenshots, PDFs, or other visual artifacts.
+
+This means:
+
+- open the shortlisted Reddit thread in a real logged-in browser session when needed
+- capture screenshots of the visible comment regions or thread sections
+- optionally generate PDF or print-style captures if that is easier to process
+- store the captures with stable filenames linked to the source thread URL
+
+This works well when the page can be viewed reliably but not scraped reliably.
+
+## Step 9. Use OCR or document parsing on the captures
+
+Once screenshots or PDFs exist, run them through an OCR or document parsing layer to recover text for downstream use.
+
+Useful outputs from this step include:
+
+- extracted text
+- markdown or plain text renderings
+- structured artifacts for later review
+- image assets and related metadata
+
+This layer is especially useful when you want to feed visible Reddit discussion into sentiment analysis without depending on fragile DOM parsing.
+
+## Step 10. Use a manual or semi-manual fallback
+
+When browser automation is blocked or automated capture still does not recover enough content, use a manual review layer.
 
 This means:
 
@@ -264,9 +308,23 @@ One row per shortlisted thread, including:
 - comment-count label
 - notes
 
-### 4. Manual capture sheet
+### 4. Screenshot or document capture set
 
-Used when rendered extraction is blocked.
+Used when rendered extraction is unreliable but the visible page can still be captured.
+
+Suggested fields or associated metadata:
+
+- keyword or entity
+- thread URL
+- capture filename
+- capture type such as screenshot or PDF
+- capture timestamp
+- page section or scroll region
+- OCR output path
+
+### 5. Manual capture sheet
+
+Used when automated capture still needs human support.
 
 Suggested fields:
 
@@ -292,6 +350,14 @@ Use automation for:
 - URL de-duplication
 - shortlist generation
 - metadata extraction
+
+### OCR or capture layer
+
+Use screenshot, PDF, or OCR processing for:
+
+- visible comment capture
+- text recovery from rendered pages
+- analysis-ready outputs when scraping fails
 
 ### Manual or semi-manual layer
 
@@ -321,6 +387,8 @@ This workflow may struggle with:
 - pages protected by anti-bot systems
 - session-sensitive or challenge-gated Reddit views
 - browser automation paths that are flagged by Reddit security systems
+- OCR noise or imperfect text recovery from screenshots
+- attribution challenges when comments are captured visually instead of structurally
 
 For that reason, the workflow should always include a manual fallback plan.
 
@@ -329,6 +397,8 @@ For that reason, the workflow should always include a manual fallback plan.
 If you want to improve this workflow over time, useful next additions include:
 
 - a reusable manual review template
+- screenshot naming and capture conventions
+- OCR-ready export formatting
 - thread scoring rules
 - sentiment-ready export formatting
 - automated tagging by topic or theme
@@ -352,5 +422,7 @@ It is less reliable for:
 The recommended operating model is therefore:
 
 - automate discovery and prioritization
-- use manual or semi-manual review for the final text capture step
+- use screenshot or document capture when scraping is weak
+- run OCR or document parsing on those captures
+- use manual or semi-manual review for the final quality-control text capture step
 - then run sentiment analysis or other downstream analysis on the captured content

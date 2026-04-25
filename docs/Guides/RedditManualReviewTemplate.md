@@ -6,6 +6,8 @@ This guide provides a reusable template for manually reviewing and capturing Red
 
 It is intended to complement a Reddit discovery and prioritization workflow by giving reviewers a consistent way to collect thread context and comment text for later analysis.
 
+It also works well alongside screenshot capture, PDF capture, or OCR/document parsing workflows when direct scraping is unreliable.
+
 Typical downstream uses include:
 
 - sentiment analysis
@@ -21,6 +23,7 @@ Use a manual review template when:
 - search discovery has already identified promising Reddit threads
 - automated scraping recovered only partial metadata
 - browser automation is blocked by security checks or anti-bot protections
+- OCR or document parsing has recovered text that still needs human cleanup
 - the final step requires reliable human judgment anyway
 
 ## Review Goals
@@ -38,9 +41,10 @@ A good manual Reddit review should answer:
 1. Open the shortlisted Reddit thread in a real logged-in browser session.
 2. Confirm that the thread is actually relevant.
 3. Record basic thread metadata.
-4. Capture the most useful visible comments.
-5. Add reviewer notes and a relevance rating.
-6. Optionally label sentiment, topic, or risk.
+4. If available, attach screenshots, PDFs, or OCR outputs for the thread.
+5. Capture the most useful visible comments.
+6. Add reviewer notes and a relevance rating.
+7. Optionally label sentiment, topic, or risk.
 
 ## Suggested Fields
 
@@ -98,6 +102,9 @@ Use the following fields in a CSV, spreadsheet, database, or markdown note.
 - source_query
 - source_variant
 - source_run_id
+- screenshot_path
+- pdf_path
+- ocr_text_path
 - needs_follow_up
 - follow_up_notes
 
@@ -140,6 +147,8 @@ Choose one stable label system and keep it consistent across reviews.
 ## Comment Selection Guidance
 
 Do not try to capture every comment.
+
+If screenshots or OCR are part of the process, first identify the sections of the thread that are worth preserving, then capture only the comments that matter most.
 
 Instead, capture comments that are:
 
@@ -221,10 +230,13 @@ Good options include:
 - spreadsheet
 - database table
 - markdown review files
+- OCR text artifacts linked to screenshots or PDFs
 
 ## Summary
 
 A manual Reddit review template is the practical fallback when the automated pipeline can find the right threads but cannot reliably extract full rendered comment text.
+
+It is especially effective when combined with screenshot capture or OCR-based text recovery.
 
 Used correctly, it lets you:
 
