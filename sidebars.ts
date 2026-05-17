@@ -16,6 +16,18 @@ const sidebars: SidebarsConfig = {
     'getting-started',
     {
       type: 'category',
+      label: 'Daily Journal',
+      link: {
+        type: 'doc',
+        id: 'DailyJournal/intro',
+      },
+      items: [
+        'DailyJournal/intro',
+        'DailyJournal/2026-05-17',
+      ],
+    },
+    {
+      type: 'category',
       label: 'MS Teams',
       link: {
         type: 'doc',
