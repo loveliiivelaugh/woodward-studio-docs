@@ -17,3 +17,18 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+engineering:
+  label: Engineering
+  permalink: /engineering
+  description: Real engineering execution, systems work, and build notes.
+
+systems:
+  label: Systems
+  permalink: /systems
+  description: Control planes, orchestration, infra, and platform design.
+
+proof-of-work:
+  label: Proof Of Work
+  permalink: /proof-of-work
+  description: Public-safe evidence of real technical work and trajectory.

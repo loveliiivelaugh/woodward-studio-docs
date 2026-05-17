@@ -21,3 +21,12 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+michael:
+  name: Michael Woodward
+  title: Independent engineering systems builder
+  url: https://github.com/loveliiivelaugh
+  image_url: https://github.com/loveliiivelaugh.png
+  page: true
+  socials:
+    github: loveliiivelaugh
